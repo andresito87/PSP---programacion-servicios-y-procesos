@@ -1,0 +1,2 @@
+Desde el directorio donde se encuentran los jars, ejecutar:
+java -jar Cadenas.jar | java -jar Frecuencia.jar
