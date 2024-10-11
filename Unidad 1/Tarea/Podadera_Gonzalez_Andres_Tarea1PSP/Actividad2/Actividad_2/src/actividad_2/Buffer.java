@@ -51,14 +51,10 @@ public class Buffer {
         siguiente--;
 
         this.estaLlena = false;
-        if (siguiente == 0) {
-            this.estaVacia = true;
-        }
 
-        notifyAll();
         // sumo el elemento a la sumatoria
         sumatoria += buffer[siguiente];
-
+        notifyAll();
         return this.buffer[this.siguiente];
     }
 
@@ -106,7 +102,7 @@ public class Buffer {
             }
 
         }
-        
+
         return arrayToString.toString();  // Convertir el StringBuilder a String y devolverlo
     }
 }

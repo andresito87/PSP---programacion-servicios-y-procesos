@@ -1,4 +1,9 @@
-package jardinessincronizado;
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package sincronizasegmentojardines;
 
 // @author IMCG
 public class Main {
@@ -8,14 +13,15 @@ public class Main {
      */
     public static void main(String[] args) {
         RecursoJardin jardin = new RecursoJardin();
-        //crea un objeto RecursoJardÃ­n
+        //crea un objeto RecursoJardí­n
 
         for (int i = 1; i <= 10; i++) {
             (new Entra_Jardin("Entra" + i, jardin)).start();
-        }//entrada de 10 hilos al jardÃ­n
+        }//crea e inicia 10 hilos que simulan entrada al jardí­n
 
         for (int i = 1; i <= 15; i++) {
             (new Sale_Jardin("Sale" + i, jardin)).start();
-        }//salida de 15 hilos al jardÃ­n
+        }//crea e inicia 15 hilos que simulan salida del jardí­n
     }
 }
+
