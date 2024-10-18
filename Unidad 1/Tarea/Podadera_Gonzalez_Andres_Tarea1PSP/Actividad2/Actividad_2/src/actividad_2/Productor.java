@@ -25,12 +25,12 @@ public class Productor extends Thread {
     @Override
     public void run() {
         while (true) {
-            int valorProducido = (int) (Math.random() * 11); // Generar un número aleatorio entre 0 y 10
+            int valorProducido = (int) (Math.random() * 10) + 1; // Generar un número aleatorio entre 1 y 10
             buffer.producir(valorProducido);
             System.out.println(this.getNombre() + ", introduce el valor "
                     + valorProducido + " en la posicion " + buffer.getSiguiente()
                     + ", Array = " + this.buffer.recursoCompartidoToString()
-                    +". Suma: "+this.buffer.getSumatoria()
+                    + ". Suma: " + this.buffer.getSumatoria()
             );
 
             // Comprobar si se alcanzó el valor máximo en el buffer
@@ -47,4 +47,3 @@ public class Productor extends Thread {
     }
 
 }
-
