@@ -1,2 +1,9 @@
 Desde el directorio donde se encuentran los jars, ejecutar:
+
+java -jar Cadenas.jar
+java -jar Cadenas.jar 5
+
+java -jar Frecuencia.jar
+java -jar Frecuencia.jar esta es una cadena de prueba
+
 java -jar Cadenas.jar | java -jar Frecuencia.jar

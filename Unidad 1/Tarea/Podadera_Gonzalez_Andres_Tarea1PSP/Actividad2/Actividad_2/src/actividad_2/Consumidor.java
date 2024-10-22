@@ -1,6 +1,8 @@
 package actividad_2;
 
-
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -25,24 +27,44 @@ public class Consumidor extends Thread {
 
     @Override
     public void run() {
-        while (true) {
-            int valorConsumido = buffer.consumir();
-            System.out.println(this.getNombre() + ", saca el valor " + valorConsumido
-                    + " en la posicion " + buffer.getSiguiente()
-                    + ", Array = " + this.buffer.recursoCompartidoToString()
-                    +", Suma: "+this.buffer.getSumatoria());
+        try (FileWriter fileWriter = new FileWriter("logs.txt", true); 
+                PrintWriter fileOutput = new PrintWriter(fileWriter)) {
+            while (true) {
+                // consumimos un numero
+                int valorConsumido = buffer.consumir();
+                // creamos el mensaje de salida
+                String mensaje = this.getNombre() + ", saca el valor " + valorConsumido
+                        + " en la posicion " + buffer.getSiguiente()
+                        + ", Array = " + this.buffer.recursoCompartidoToString()
+                        + ", Suma: " + this.buffer.getSumatoria();
 
-            // Comprobar si se alcanzó el valor máximo en el buffer
-            if (buffer.fueValorMaximoSumatoriaAlcanzado()) {
-                System.out.println("Resultado final: " + this.buffer.getSumatoria());
-                break; // Salir del bucle y detener el hilo
-            }
+                // imprimimos el mensaje en consola
+                System.out.println(mensaje);
 
-            try {
-                Thread.sleep(150); // Simular tiempo de consumo
-            } catch (InterruptedException ex) {
-                Logger.getLogger(Consumidor.class.getName()).log(Level.SEVERE, null, ex);
+                // guardamos el mensaje en el archivo logs.txt
+                fileOutput.println(mensaje);
+
+                // comprobar si se alcanzó el valor máximo en el buffer
+                if (buffer.fueValorMaximoSumatoriaAlcanzado()) {
+                    // creamos el mensaje de que se alcanzo o sobrepaso el valor maximo de la sumatoria
+                    String resultadoFinal = "Resultado final: " + this.buffer.getSumatoria();
+                    // imprimimos el mensaje en consola
+                    System.out.println(resultadoFinal);
+                    // gruardamos el resultado final en el archivo
+                    fileOutput.println(resultadoFinal);
+                    break; // salir del bucle y detener el hilo
+                }
+
+                try {
+                    // dormimos el hilo
+                    Thread.sleep(150); // simular tiempo de consumo
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Consumidor.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
             }
+        } catch (IOException ex) {
+            Logger.getLogger(Consumidor.class.getName()).log(Level.SEVERE, "Error escribiendo en el archivo logs.txt", ex);
         }
     }
 

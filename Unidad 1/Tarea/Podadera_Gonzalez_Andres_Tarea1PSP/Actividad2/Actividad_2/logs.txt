@@ -1,0 +1,47 @@
+Hilo productor 1, introduce el valor 7 en la posicion 1, Array = 7 - . Suma: 7
+Hilo productor 1, introduce el valor 5 en la posicion 3, Array = 7 - 7 - 5. Suma: 7
+Hilo productor 1, introduce el valor 5 en la posicion 4, Array = 7 - 7 - 5 - 5. Suma: 12
+Hilo productor 1, introduce el valor 8 en la posicion 5, Array = 7 - 7 - 5 - 5 - 8. Suma: 22
+Hilo productor 1, introduce el valor 3 en la posicion 7, Array = 7 - 7 - 5 - 5 - 8 - 0 - 3. Suma: 22
+Hilo productor 1, introduce el valor 3 en la posicion 8, ArraHilo productor 2, introduce el valor 7 en la posicion 2, Array = 7 - . Suma: 7
+Hilo productor 2, introduce el valor 7 en la posicion 2, Array = 7 - 7 - 5. Suma: 7
+Hilo productor 2, introduce el valor 5 en la posicion 3, Array = 7 - 7 - 5 - 5. Suma: 12
+Hilo productor 2, introduce el valor 10 en la posicion 4, Array = 7 - 7 - 5 - 5 - 8. Suma: 22
+Hilo productor 2, introduce el valor 0 en la posicion 6, Array = 7 - 7 - 5 - 5 - 8 - 0 - 3. Suma: 22
+Hilo productor 2, introduce el valor 1 en la posicion 7, ArrHilo consumidor, saca el valor 7 en la posicion 1, Array = 7, Suma: 7
+Hilo consumidor, saca el valor 5 en la posicion 2, Array = 7 - 7, Suma: 12
+Hilo consumidor, saca el valor 10 en la posicion 4, Array = 7 - 7 - 5 - 5 - 8, Suma: 22
+Hilo consumidor, saca el valor 3 en la posicion 6, Array = 7 - 7 - 5 - 5 - 8 - 0, Suma: 25
+Hilo consumidor, saca el valor 3 en la posicion 7, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1, Suma: 28
+Hilo consumidor, saca el valor 10 en la posicion 8, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1, Suma: 38
+Hilo consumidor, saca el valor 8 en la posicion 8, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 6, Suma: 46
+Hilo consumidor, saca el valor 6 en la posicion 8, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 5, Suma: 52
+Hilo consumidor, saca el valor 5 en la posicion 8, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1, Suma: 57
+Hilo consumidor, saca el valor 1 en la posicion 8, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1, Suma: 58
+Hilo consumidor, saca el valor 4 en la posicion 8, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1, Sy = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 3. Suma: 25
+Hilo productor 1, introduce el valor 1 en la posicion 8, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 10. Suma: 28
+Hilo productor 1, introduce el valor 8 en la posicion 9, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 8. Suma: 38
+Hilo productor 1, introduce el valor 5 en la posicion 9, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 5. Suma: 52
+Hilo productor 1, introduce el valor 4 en la posicion 9, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 4. Suma: 58
+Hilo productor 1, introducay = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 3. Suma: 25
+Hilo productor 2, introduce el valor 10 en la posicion 9, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 10. Suma: 28
+Hilo productor 2, introduce el valor 6 en la posicion 9, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 6. Suma: 46
+Hilo productor 2, introduce el valor 1 en la posicion 9, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 1. Suma: 57
+Hilo productor 2, introduce el valor 6 en la posicion 9, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 6. Suma: 62
+Hilo productor 2, introduma: 62
+Hilo consumidor, saca el valor 6 en la posicion 8, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1, Suma: 68
+Hilo consumidor, saca el valor 0 en la posicion 8, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 10, Suma: 68
+Hilo consumidor, saca el valor 10 en la posicion 8, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1, Suma: 78
+Hilo consumidor, saca el valor 10 en la posicion 8, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1, Suma: 88
+Hilo consumidor, saca el valor 2 en la posicion 8, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1, Suma: uce el valor 10 en la posicion 9, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 10. Suma: 68
+Hilo productor 2, introduce el valor 2 en la posicion 9, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 2. Suma: 88
+Hilo productor 2, introduce el valor 10 en la posicion 9, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 10. Suma: 91
+Hilo productor 2, introduce el valor 4 en la posicion 10, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 4 - 4. Suma: 101
+e el valor 0 en la posicion 9, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 0. Suma: 68
+Hilo productor 1, introduce el valor 10 en la posicion 9, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 10. Suma: 78
+Hilo productor 1, introduce el valor 1 en la posicion 9, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 1. Suma: 90
+Hilo productor 1, introduce el valor 4 en la posicion 9, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1 - 4. Suma: 101
+90
+Hilo consumidor, saca el valor 1 en la posicion 8, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1, Suma: 91
+Hilo consumidor, saca el valor 10 en la posicion 8, Array = 7 - 7 - 5 - 5 - 8 - 0 - 1 - 1, Suma: 101
+Resultado final: 101
