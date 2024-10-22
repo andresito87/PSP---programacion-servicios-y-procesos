@@ -12,13 +12,13 @@ import java.util.Scanner;
 public class Cadenas {
 
     public static final String[] SILABAS = {
-        "ba", "be", "bi", "bo", "bu", "ca", "ce", "ci", "co", "cu",
-        "da", "de", "di", "do", "du", "fa", "fe", "fi", "fo", "fu",
-        "ga", "ge", "gi", "go", "gu", "la", "le", "li", "lo", "lu",
-        "ma", "me", "mi", "mo", "mu", "na", "ne", "ni", "no", "nu",
-        "pa", "pe", "pi", "po", "pu", "ra", "re", "ri", "ro", "ru",
-        "sa", "se", "si", "so", "su", "ta", "te", "ti", "to", "tu",
-        "va", "ve", "vi", "vo", "vu", "za", "ze", "zi", "zo", "zu"
+            "ba", "be", "bi", "bo", "bu", "ca", "ce", "ci", "co", "cu",
+            "da", "de", "di", "do", "du", "fa", "fe", "fi", "fo", "fu",
+            "ga", "ge", "gi", "go", "gu", "la", "le", "li", "lo", "lu",
+            "ma", "me", "mi", "mo", "mu", "na", "ne", "ni", "no", "nu",
+            "pa", "pe", "pi", "po", "pu", "ra", "re", "ri", "ro", "ru",
+            "sa", "se", "si", "so", "su", "ta", "te", "ti", "to", "tu",
+            "va", "ve", "vi", "vo", "vu", "za", "ze", "zi", "zo", "zu"
     }; // Nota: no se comtemplan caracteres acentuados
 
     public static void main(String[] args) {
@@ -29,13 +29,15 @@ public class Cadenas {
             try {
                 cantidadCadenas = Integer.parseInt(args[0]);
             } catch (NumberFormatException e) {
-                // muestro aviso de no 
+                // muestro aviso de no
                 System.err.println("El parámetro proporcionado no es un número válido.");
                 System.exit(1); // Salir si la entrada no es válida
             }
         } else {
-            // Si no se pasa un argumento, solicitar la cantidad de cadenas al usuario por la entrada error
-            // no se puede usar la entrada estándar porque la aplicación cogería esos caracteres para analizarlos
+            // Si no se pasa un argumento, solicitar la cantidad de cadenas al usuario por
+            // la entrada error
+            // no se puede usar la entrada estándar porque la aplicación cogería esos
+            // caracteres para analizarlos
             System.err.print("Introduce la cantidad de cadenas a generar: (ENTER para terminar) ");
             Scanner scanner = new Scanner(System.in);
             try {
@@ -44,6 +46,7 @@ public class Cadenas {
                 System.err.println("Entrada no válida. Por favor, ingresa un número.");
                 System.exit(1); // Salir si la entrada no es válida
             }
+            scanner.close();
         }
 
         // Genero un stream de salida de datos y voy enviándolos a la salida estándar
@@ -51,8 +54,8 @@ public class Cadenas {
 
             for (int i = 0; i < cantidadCadenas; i++) {
                 StringBuilder cadena = new StringBuilder();
-                // Longitud aleatoria de 2, 4, 6, 8, 10 para evitar 
-                // consonantes sobrantes y sean sílabas completas  
+                // Longitud aleatoria de 2, 4, 6, 8, 10 para evitar
+                // consonantes sobrantes y sean sílabas completas
                 int longitudCadena = (random.nextInt(5) + 1) * 2;
                 while (cadena.length() < longitudCadena) {
                     cadena.append(SILABAS[random.nextInt(SILABAS.length)]);

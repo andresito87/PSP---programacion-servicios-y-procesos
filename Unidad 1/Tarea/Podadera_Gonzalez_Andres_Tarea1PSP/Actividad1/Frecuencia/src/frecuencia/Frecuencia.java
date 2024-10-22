@@ -25,13 +25,15 @@ public class Frecuencia {
                     analizarCadena(linea);
                 }
             } else {
-                // Modo interactivo: No esta usando ni pipe ni los parametros, pide cadena al usuario
+                // Modo interactivo: No esta usando ni pipe ni los parametros, pide cadena al
+                // usuario
                 Scanner scanner = new Scanner(System.in);
                 System.out.print("Introduce una cadena: (ENTER) para terminar ");
                 linea = scanner.nextLine();
                 if (!linea.isEmpty()) {
                     analizarCadena(linea);
                 }
+                scanner.close();
             }
         } catch (Exception e) {
             System.out.println("Ha ocurrido un error: " + e.getMessage());
@@ -39,7 +41,7 @@ public class Frecuencia {
     }
 
     private static void analizarCadena(String linea) {
-        int[] frecuencias = new int[5];  // a, e, i, o, u
+        int[] frecuencias = new int[5]; // a, e, i, o, u
         for (char c : linea.toLowerCase().toCharArray()) {
             switch (c) {
                 case 'a' ->
@@ -54,6 +56,7 @@ public class Frecuencia {
                     frecuencias[4]++;
             }
         }
-        System.out.println("Cadena: " + linea + " --> " + frecuencias[0] + " " + frecuencias[1] + " " + frecuencias[2] + " " + frecuencias[3] + " " + frecuencias[4]);
+        System.out.println("Cadena: " + linea + " --> " + frecuencias[0] + " " + frecuencias[1] + " " + frecuencias[2]
+                + " " + frecuencias[3] + " " + frecuencias[4]);
     }
 }
